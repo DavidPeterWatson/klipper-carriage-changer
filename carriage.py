@@ -2,6 +2,7 @@ class Carriage:
     def __init__(self, config):
         self.printer = config.get_printer()
         self.name = config.get_name().split(' ')[-1]
+        self.dock = config.get('dock')
         self.docking_bay_x = config.get('docking_bay_x')
         self.offset_x = config.get('offset_x')
         self.offset_y = config.get('offset_y')
