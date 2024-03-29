@@ -1,7 +1,7 @@
 #!/bin/bash
 
 KLIPPER_PATH="${HOME}/klipper"
-CARRIAGE_CHANGER_PATH="${HOME}/klipper_carriage_changer"
+CARRIAGE_CHANGER_PATH="${HOME}/klipper-carriage-changer"
 
 set -eu
 export LC_ALL=C
