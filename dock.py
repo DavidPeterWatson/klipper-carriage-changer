@@ -7,7 +7,7 @@ class Dock:
         self.safe_zd = config.get('safe_zd')
         self.load_yd = config.get('load_yd')
         self.load_xd = config.get('load_xd')
-        self.loading_speed = config.get('loading_speed')
+        self.loading_speed = float(config.get('loading_speed')) * 60
         self.loading_pause = config.get('loading_pause')
         self.printer.add_object('dock ' + self.name, self)
 
