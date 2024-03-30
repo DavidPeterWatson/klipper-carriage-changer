@@ -9,7 +9,7 @@ class Dock:
         self.load_x = config.get('load_xd')
         self.loading_speed = config.get('loading_speed')
         self.loading_pause = config.get('loading_pause')
-        self.printer.add_object(self.name, self)
+        self.printer.add_object(config.get_name(), self)
 
 
 def load_config_prefix(config):

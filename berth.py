@@ -4,7 +4,7 @@ class Berth:
         self.name = config.get_name().split(' ')[-1]
         self.dock_name = config.get('dock')
         self.dock_x = config.get('dock_x')
-        self.printer.add_object(self.name, self)
+        self.printer.add_object(config.get_name(), self)
 
 
 def load_config_prefix(config):
