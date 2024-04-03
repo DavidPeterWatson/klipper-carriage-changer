@@ -3,6 +3,7 @@ class Carriage:
         self.printer = config.get_printer()
         self.name = config.get_name().split(' ')[-1]
         self.dock = config.get('dock')
+        # self.berth = config.get('berth')
         self.docking_bay_x = float(config.get('docking_bay_x'))
         self.offset_x = float(config.get('offset_x'))
         self.offset_y = float(config.get('offset_y'))
