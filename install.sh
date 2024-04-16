@@ -44,7 +44,7 @@ function link_extension {
     echo "[INSTALL] Linking extension to Klipper..."
     ln -srfn "${CARRIAGE_CHANGER_PATH}/carriage.py" "${KLIPPER_PATH}/klippy/extras/carriage.py"
     ln -srfn "${CARRIAGE_CHANGER_PATH}/dock.py" "${KLIPPER_PATH}/klippy/extras/dock.py"
-    # ln -srfn "${CARRIAGE_CHANGER_PATH}/carriage_movement.cfg" "${KLIPPER_PATH}/klippy/extras/carriage_movement.cfg"
+    ln -srfn "${CARRIAGE_CHANGER_PATH}/carriage_movement.cfg" "${KLIPPER_PATH}/klippy/extras/carriage_movement.cfg"
 }
 
 function restart_klipper {

@@ -3,7 +3,7 @@ class Berth:
         self.printer = config.get_printer()
         self.name = config.get_name().split(' ')[-1]
         self.dock_name = config.get('dock')
-        self.dock_x = config.get('dock_x')
+        self.x_pos = config.get('x_pos')
         self.printer.add_object('berth ' + self.name, self)
 
 

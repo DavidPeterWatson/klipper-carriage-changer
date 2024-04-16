@@ -2,16 +2,14 @@ class Carriage:
     def __init__(self, config):
         self.printer = config.get_printer()
         self.name = config.get_name().split(' ')[-1]
-        self.dock = config.get('dock')
-        # self.berth = config.get('berth')
-        self.docking_bay_x = float(config.get('docking_bay_x'))
+        self.berth = config.get('berth')
         self.offset_x = float(config.get('offset_x'))
         self.offset_y = float(config.get('offset_y'))
         self.offset_z = float(config.get('offset_z'))
         self.printer.add_object('carriage ' + self.name, self)
-        # gcode_macro = self.printer.load_object(config, 'gcode_macro')
-        # self.after_load_template = gcode_macro.load_template(config, 'after_load_gcode')
-        # self.after_unload_template = gcode_macro.load_template(config, 'after_unload_gcode', '')
+        gcode_macro = self.printer.load_object(config, 'gcode_macro') 
+        self.after_load_template = gcode_macro.load_template(config, 'after_load_gcode', '') 
+        self.after_unload_template = gcode_macro.load_template(config, 'after_unload_gcode', '')
 
 
     # def cmd_QUERY_BUTTON(self, gcmd):
