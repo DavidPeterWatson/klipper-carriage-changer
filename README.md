@@ -4,4 +4,6 @@
 </p>
 
 
-Carriage Changer provides the code needed to change carriages on a cartesian machine. Rather than locking tools onto the carriage on a gantry, this pushes the tool carriage on & off the gantry.
+Carriage Changer provides the code needed to change carriages on a Kimeron Machine. Rather than locking tools onto the carriage on a gantry, this pushes the tool carriage on & off the gantry.
+
+Note: Do not us this. It is setup to only work on one machine named Kimeron.
