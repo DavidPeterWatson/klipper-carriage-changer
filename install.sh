@@ -42,11 +42,15 @@ function check_download {
 
 function link_extension {
     echo "[INSTALL] Linking extension to Klipper..."
+    ln -srfn "${CARRIAGE_CHANGER_PATH}/carriage_changer.py" "${KLIPPER_PATH}/klippy/extras/carriage_changer.py"
     ln -srfn "${CARRIAGE_CHANGER_PATH}/carriage.py" "${KLIPPER_PATH}/klippy/extras/carriage.py"
     ln -srfn "${CARRIAGE_CHANGER_PATH}/berth.py" "${KLIPPER_PATH}/klippy/extras/berth.py"
     ln -srfn "${CARRIAGE_CHANGER_PATH}/dock.py" "${KLIPPER_PATH}/klippy/extras/dock.py"
     ln -srfn "${CARRIAGE_CHANGER_PATH}/carriage_movement.cfg" "${KLIPPER_PATH}/klippy/extras/carriage_movement.cfg"
 }
+/home/biqu/klipper/klippy/extras
+
+ln -srfn "/home/biqu/klipper-carriage-changer/berth.py" "/home/biqu/klipper/klippy/extras/berth.py"
 
 function restart_klipper {
     echo "[POST-INSTALL] Restarting Klipper..."
