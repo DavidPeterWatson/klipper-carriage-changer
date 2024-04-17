@@ -2,6 +2,7 @@ class Carriage:
     def __init__(self, config):
         self.printer = config.get_printer()
         self.name = config.get_name().split(' ')[-1]
+        self.validate_name(self.name)
         self.berth = config.get('berth')
         self.offset_x = float(config.get('offset_x') or 0)
         self.offset_y = float(config.get('offset_y') or 0)
@@ -11,6 +12,13 @@ class Carriage:
         self.after_load_template = gcode_macro.load_template(config, 'after_load_gcode', '') 
         self.after_unload_template = gcode_macro.load_template(config, 'after_unload_gcode', '')
 
+    def validate_name(name):
+        if name == 'none':
+            raise Exception("Carriage name cannot be 'none'")
+        if name == '':
+            raise Exception("Carriage name cannot be ''")
+        if not name:
+            raise Exception("Carriage name cannot be '{name}'")
 
     # def cmd_QUERY_BUTTON(self, gcmd):
     #     gcmd.respond_info(self.name + ": " + self.get_status()['state'])
