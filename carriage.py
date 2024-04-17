@@ -2,7 +2,7 @@ class Carriage:
     def __init__(self, config):
         self.printer = config.get_printer()
         self.name = config.get_name().split(' ')[-1]
-        self.validate_name(self.name)
+        Carriage.validate_name(self.name)
         self.berth = config.get('berth')
         self.offset_x = float(config.get('offset_x') or 0)
         self.offset_y = float(config.get('offset_y') or 0)
