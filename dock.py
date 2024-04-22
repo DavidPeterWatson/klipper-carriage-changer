@@ -5,7 +5,6 @@ class Dock:
         self.location = config.get('location')
         self.safe_y = float(config.get('safe_y') or 0)
         self.safe_z = float(config.get('safe_z') or 20)
-        self.safe_zd = float(config.get('safe_zd') or 0)
         self.load_yd = float(config.get('load_yd') or 0)
         self.load_xd = float(config.get('load_xd') or 0)
         self.align_speed = float(config.get('align_speed')) * 60
