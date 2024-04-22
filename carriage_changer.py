@@ -3,7 +3,8 @@ import os
 class CarriageChanger:
     def __init__(self, config):
         self.printer = config.get_printer()
-
+        self.safe_z = float(config.get('safe_z') or 20)
+        self.printer.add_object('carriage_changer', self)
         # Load carriage movement
         pconfig = self.printer.lookup_object('configfile')
         dirname = os.path.dirname(os.path.realpath(__file__))
