@@ -4,6 +4,10 @@ class CarriageChanger:
     def __init__(self, config):
         self.printer = config.get_printer()
         self.safe_z = float(config.get('safe_z') or 20)
+        self.align_speed = float(config.get('align_speed')) * 60
+        self.loading_speed = float(config.get('loading_speed')) * 60
+        self.loading_acceleration = float(config.get('loading_acceleration') or 500)
+        self.loading_pause = config.get('loading_pause') or 1
         self.printer.add_object('carriage_changer', self)
         # Load carriage movement
         pconfig = self.printer.lookup_object('configfile')
