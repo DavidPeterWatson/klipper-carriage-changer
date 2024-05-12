@@ -7,7 +7,7 @@ class CarriageChanger:
         self.safe_z = float(config.get('safe_z') or 20)
         self.align_speed = float(config.get('align_speed')) * 60
         self.loading_speed = float(config.get('loading_speed')) * 60
-        self.loading_acceleration = float(config.get('loading_acceleration') or 500)
+        self.acceleration = float(config.get('acceleration') or 500)
         self.loading_pause = config.get('loading_pause') or 1
         self.printer.add_object('carriage_changer', self)
         # Load carriage movement
