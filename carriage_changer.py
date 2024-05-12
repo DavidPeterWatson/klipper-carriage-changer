@@ -3,6 +3,7 @@ import os
 class CarriageChanger:
     def __init__(self, config):
         self.printer = config.get_printer()
+        self.name = 'carriage_changer'
         self.safe_z = float(config.get('safe_z') or 20)
         self.align_speed = float(config.get('align_speed')) * 60
         self.loading_speed = float(config.get('loading_speed')) * 60
