@@ -8,7 +8,7 @@ class Carriage:
         self.offset_y = float(config.get('offset_y') or 0)
         self.offset_z = float(config.get('offset_z') or 0)
         self.printer.add_object('carriage ' + self.name, self)
-        self.after_load_gcode = config.get('after_load_gcode', "RESPOND MSG=Loaded")
+        self.after_load_gcode = config.get('after_load_gcode', 'RESPOND MSG=Loaded')
         self.after_unload_gcode = config.get('after_unload_gcode', 'RESPOND MSG=Unloaded')
 
     def validate_name(name):
