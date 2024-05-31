@@ -8,9 +8,8 @@ class Carriage:
         self.offset_y = float(config.get('offset_y') or 0)
         self.offset_z = float(config.get('offset_z') or 0)
         self.printer.add_object('carriage ' + self.name, self)
-        gcode_macro = self.printer.load_object(config, 'gcode_macro') 
-        self.after_load_gcode = gcode_macro.load_template(config, 'after_load_gcode', '') 
-        self.after_unload_gcode = gcode_macro.load_template(config, 'after_unload_gcode', '')
+        self.after_load_gcode = config.get('after_load_gcode') 
+        self.after_unload_gcode = config.get('after_unload_gcode')
 
     def validate_name(name):
         if name == 'none':
