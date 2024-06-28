@@ -5,7 +5,7 @@ class Dock:
         self.location = config.get('location')
         self.safe_y = float(config.get('safe_y') or 0)
         self.load_yd = float(config.get('load_yd') or 0)
-        self.load_xd = float(config.get('load_xd') or 0)
+        self.engage_xd = float(config.get('engage_xd') or 0)
         self.printer.add_object('dock ' + self.name, self)
 
 
